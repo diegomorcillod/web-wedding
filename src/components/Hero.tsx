@@ -1,5 +1,4 @@
 import React from 'react';
-import { weddingConfig } from '../config';
 
 const Hero: React.FC = () => {
   return (
