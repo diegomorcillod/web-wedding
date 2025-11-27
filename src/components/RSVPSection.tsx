@@ -4,7 +4,7 @@ import { weddingConfig } from '../config';
 const RSVPSection: React.FC = () => {
   return (
     <section className="mt-16 text-center">
-      <h2 className="text-3xl font-serif text-gray-800 mb-6">
+      <h2 className="text-3xl font-serif text-wedding-green-700 mb-6">
         Confirmar asistencia
       </h2>
       
@@ -18,7 +18,7 @@ const RSVPSection: React.FC = () => {
         href={weddingConfig.rsvpFormUrl}
         target="_blank"
         rel="noreferrer"
-        className="inline-block bg-amber-600 hover:bg-amber-700 text-white font-medium rounded-full px-8 py-3 shadow-lg transition-colors duration-200"
+        className="inline-block bg-wedding-pink-600 hover:bg-wedding-pink-700 text-white font-medium rounded-full px-8 py-3 shadow-lg transition-colors duration-200"
       >
         Rellenar formulario
       </a>

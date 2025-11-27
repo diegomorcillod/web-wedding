@@ -7,7 +7,7 @@ const InfoGridSection: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
         {/* Vestimenta */}
         <div className="text-center md:text-left">
-          <h3 className="text-xl font-serif text-gray-800 mb-3 flex items-center justify-center md:justify-start gap-2">
+          <h3 className="text-xl font-serif text-wedding-green-700 mb-3 flex items-center justify-center md:justify-start gap-2">
             <span>👗</span> Vestimenta
           </h3>
           <p className="text-gray-700 text-sm leading-relaxed">
@@ -17,7 +17,7 @@ const InfoGridSection: React.FC = () => {
 
         {/* Regalos */}
         <div className="text-center md:text-left">
-          <h3 className="text-xl font-serif text-gray-800 mb-3 flex items-center justify-center md:justify-start gap-2">
+          <h3 className="text-xl font-serif text-wedding-green-700 mb-3 flex items-center justify-center md:justify-start gap-2">
             <span>🎁</span> Regalos
           </h3>
           <p className="text-gray-700 text-sm leading-relaxed">
@@ -27,7 +27,7 @@ const InfoGridSection: React.FC = () => {
 
         {/* Contacto */}
         <div className="text-center md:text-left">
-          <h3 className="text-xl font-serif text-gray-800 mb-3 flex items-center justify-center md:justify-start gap-2">
+          <h3 className="text-xl font-serif text-wedding-green-700 mb-3 flex items-center justify-center md:justify-start gap-2">
             <span>📞</span> Contacto
           </h3>
           <div className="text-gray-700 text-sm space-y-2">
@@ -42,7 +42,7 @@ const InfoGridSection: React.FC = () => {
 
       {/* Ubicación */}
       <div className="border-t border-gray-200 pt-8 text-center">
-        <h3 className="text-2xl font-serif text-gray-800 mb-4">
+        <h3 className="text-2xl font-serif text-wedding-green-700 mb-4">
           📍 Ubicación
         </h3>
         <p className="text-gray-700 mb-6">

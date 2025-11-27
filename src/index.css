@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply font-sans bg-[#f7f0e9] text-gray-800 px-4;
+    @apply font-body bg-[#f7f0e9] text-gray-800 px-4;
   }
   
   html {

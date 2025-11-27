@@ -5,7 +5,24 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'serif': ['Playfair Display', 'serif'],
+        'body': ['Lora', 'serif'],
+      },
+      colors: {
+        'wedding-pink': {
+          500: '#f472b6',
+          600: '#ec4899',
+          700: '#db2777',
+        },
+        'wedding-green': {
+          500: '#86efac',
+          600: '#4ade80',
+          700: '#22c55e',
+        },
+      },
+    },
   },
   plugins: [],
 }

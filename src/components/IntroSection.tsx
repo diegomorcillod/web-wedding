@@ -4,7 +4,7 @@ import { weddingConfig } from '../config';
 const IntroSection: React.FC = () => {
   return (
     <section className="mt-16 text-center">
-      <h2 className="text-3xl font-serif text-gray-800 mb-6">Bienvenidos</h2>
+      <h2 className="text-3xl font-serif text-wedding-green-700 mb-6">Bienvenidos</h2>
       
       <div className="max-w-2xl mx-auto space-y-4 text-gray-700 leading-relaxed">
         <p>
