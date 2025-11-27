@@ -11,6 +11,9 @@ module.exports = {
         'body': ['Lora', 'serif'],
         'display': ['Passero One', 'cursive'],
         'script': ['Pacifico', 'cursive'],
+        'crimson': ['Crimson Text', 'serif'],
+        'merriweather': ['Merriweather', 'serif'],
+        'baskerville': ['Libre Baskerville', 'serif'],
       },
       colors: {
         'wedding-pink': {
