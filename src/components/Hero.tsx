@@ -4,28 +4,58 @@ import { weddingConfig } from '../config';
 const Hero: React.FC = () => {
   return (
     <section className="text-center">
-      <p className="text-sm uppercase tracking-wider text-wedding-pink-600 mb-4">
+      {/* ¡NOS CASAMOS! - Grande y con efectos */}
+      <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-black text-wedding-green-700 mb-8 tracking-wider uppercase animate-pulse">
         ¡Nos casamos!
-      </p>
+      </h2>
       
-      <h1 className="text-5xl sm:text-6xl font-serif text-wedding-green-700 mb-6">
-        {weddingConfig.coupleNames}
+      {/* Nombres - Letra elegante tipo script */}
+      <h1 className="text-6xl sm:text-7xl md:text-8xl font-script text-wedding-pink-500 mb-8 animate-fade-in" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.1)' }}>
+        Diego & Sofía
       </h1>
       
-      <div className="flex items-center justify-center gap-4 mb-6">
-        <div className="h-px w-16 bg-wedding-pink-500"></div>
-        <div className="w-2 h-2 bg-wedding-pink-600 rounded-full"></div>
-        <div className="h-px w-16 bg-wedding-pink-500"></div>
+      {/* Líneas con corazón en el centro */}
+      <div className="flex items-center justify-center gap-4 mb-8">
+        <div className="h-0.5 w-20 sm:w-32 bg-wedding-green-600"></div>
+        <div className="text-3xl sm:text-4xl text-wedding-pink-500 animate-heartbeat">
+          ♥
+        </div>
+        <div className="h-0.5 w-20 sm:w-32 bg-wedding-green-600"></div>
       </div>
       
-      <div className="space-y-2 text-gray-700 mb-6">
-        <p className="text-xl font-light">{weddingConfig.weddingDate}</p>
-        <p className="text-2xl font-bold text-wedding-pink-500">{weddingConfig.weddingTime}</p>
-        <p className="text-lg">{weddingConfig.weddingLocation}</p>
+      {/* Fecha - Diseño especial como en el PDF */}
+      <div className="flex items-center justify-center gap-6 sm:gap-8 mb-8">
+        <div className="text-center">
+          <p className="text-sm sm:text-base uppercase tracking-widest text-wedding-green-700 font-semibold mb-2">
+            Sábado
+          </p>
+          <div className="h-0.5 w-20 bg-wedding-green-600 mx-auto"></div>
+        </div>
+        
+        <div className="text-center">
+          <p className="text-7xl sm:text-8xl font-script text-wedding-pink-500 leading-none">
+            13
+          </p>
+          <p className="text-2xl sm:text-3xl font-display text-wedding-green-700 uppercase tracking-wider mt-2">
+            2026
+          </p>
+        </div>
+        
+        <div className="text-center">
+          <p className="text-sm sm:text-base uppercase tracking-widest text-wedding-green-700 font-semibold mb-2">
+            19:00h
+          </p>
+          <div className="h-0.5 w-20 bg-wedding-green-600 mx-auto"></div>
+        </div>
       </div>
       
-      <p className="text-gray-600 italic max-w-md mx-auto">
-        Nos hace mucha ilusión compartir este día con vosotros.
+      {/* Mes destacado */}
+      <p className="text-3xl sm:text-4xl font-display text-wedding-green-700 uppercase tracking-wider mb-6">
+        Junio
+      </p>
+      
+      <p className="text-gray-600 italic max-w-md mx-auto text-lg">
+        ¡Nos emociona celebrar este día rodeados de nuestra gente favorita!
       </p>
     </section>
   );

@@ -9,6 +9,8 @@ module.exports = {
       fontFamily: {
         'serif': ['Playfair Display', 'serif'],
         'body': ['Lora', 'serif'],
+        'display': ['Passero One', 'cursive'],
+        'script': ['Pacifico', 'cursive'],
       },
       colors: {
         'wedding-pink': {
