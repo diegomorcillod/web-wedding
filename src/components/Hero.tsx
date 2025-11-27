@@ -20,6 +20,7 @@ const Hero: React.FC = () => {
       
       <div className="space-y-2 text-gray-700 mb-6">
         <p className="text-xl font-light">{weddingConfig.weddingDate}</p>
+        <p className="text-2xl font-bold text-wedding-pink-500">{weddingConfig.weddingTime}</p>
         <p className="text-lg">{weddingConfig.weddingLocation}</p>
       </div>
       

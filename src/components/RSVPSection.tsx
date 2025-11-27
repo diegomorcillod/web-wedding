@@ -8,10 +8,17 @@ const RSVPSection: React.FC = () => {
         Confirmar asistencia
       </h2>
       
+      <p className="text-gray-700 mb-6 max-w-xl mx-auto">
+        Nos encantaría contar contigo en este día tan especial.
+      </p>
       <p className="text-gray-700 mb-8 max-w-xl mx-auto">
-        Para ayudarnos con la organización, te agradeceríamos que confirmes tu 
-        asistencia antes del <strong>1 de mayo de 2026</strong> a través del 
-        siguiente formulario.
+        Hemos preparado un formulario donde, aparte de confirmar la asistencia, 
+        os preguntamos información importante a tener en cuenta para que ese día 
+        no os tengáis que preocupar de nada 😊
+      </p>
+      <p className="text-gray-700 mb-8 max-w-xl mx-auto">
+        Para organizarnos bien y cuidar cada detalle, por favor rellena el 
+        formulario antes del <strong>{weddingConfig.rsvpDeadline}</strong>.
       </p>
       
       <a

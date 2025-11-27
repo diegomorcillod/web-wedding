@@ -7,18 +7,16 @@ const IntroSection: React.FC = () => {
       <h2 className="text-3xl font-serif text-wedding-green-700 mb-6">Bienvenidos</h2>
       
       <div className="max-w-2xl mx-auto space-y-4 text-gray-700 leading-relaxed">
-        <p>
-          Será un día muy especial para nosotros celebrar nuestra boda en el 
-          majestuoso {weddingConfig.weddingLocation.split('·')[0].trim()}.
+        <p className="text-lg font-medium text-wedding-green-700">
+          Nos hace mucha ilusión compartir este día con vosotros.
         </p>
         <p>
-          Estamos muy agradecidos de poder compartir este momento único con las 
-          personas que más queremos. Vuestra presencia es el mejor regalo que 
-          podemos recibir.
+          No es solo una boda, es una celebración con los de siempre y con los más cercanos, 
+          familia, amigos y los que habéis estado ahí en cada etapa importante.
         </p>
         <p>
-          ¡Preparaos para disfrutar de una jornada inolvidable llena de amor, 
-          risas y buenos momentos!
+          Queremos que viváis este día sin mirar el reloj, con alegría, con calma, 
+          con ganas de reír, bailar y compartir.
         </p>
       </div>
     </section>
