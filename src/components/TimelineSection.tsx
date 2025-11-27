@@ -71,13 +71,13 @@ const TimelineSection: React.FC = () => {
                 }`}
               >
                 <div className={`text-${isLeft ? 'right' : 'left'} pr-${isLeft ? '4' : '0'} pl-${isLeft ? '0' : '4'}`}>
-                  <p className="text-lg font-bold text-wedding-green-700 mb-1">
+                  <p className="text-lg font-bold text-wedding-green-700 mb-1 font-crimson">
                     {event.time}
                   </p>
-                  <h3 className="text-xl font-display text-wedding-pink-600 mb-2">
+                  <h3 className="text-xl font-script text-wedding-pink-600 mb-2">
                     {event.title}
                   </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">
+                  <p className="text-sm text-gray-600 leading-relaxed font-crimson">
                     {event.description}
                   </p>
                 </div>
@@ -113,10 +113,10 @@ const TimelineSection: React.FC = () => {
 
       {/* Mensaje final */}
       <div className="text-center mt-12 animate-fade-in">
-        <p className="text-2xl sm:text-3xl font-display text-wedding-green-700 mb-2">
+        <p className="text-2xl sm:text-3xl font-script text-wedding-green-700 mb-2">
           Hasta que el cuerpo aguante
         </p>
-        <p className="text-lg text-gray-600 italic">
+        <p className="text-lg text-gray-600 italic font-crimson">
           ¡Que el ritmo no pare!
         </p>
       </div>
