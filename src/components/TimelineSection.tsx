@@ -12,6 +12,8 @@ const TimelineSection: React.FC = () => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               setVisibleItems((prev) => [...new Set([...prev, index])]);
+            } else {
+              setVisibleItems((prev) => prev.filter((i) => i !== index));
             }
           });
         },
