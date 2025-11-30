@@ -22,7 +22,7 @@ const App: React.FC = () => {
     <div className="min-h-screen py-8 sm:py-12 relative overflow-hidden">
       {/* Fondo dinámico con parallax */}
       <div 
-        className="fixed inset-0 -z-10 opacity-30"
+        className="fixed inset-0 -z-10 opacity-20"
         style={{
           transform: `translateY(${scrollY * 0.5}px)`,
           transition: 'transform 0.1s ease-out'
@@ -114,7 +114,7 @@ const App: React.FC = () => {
       </div>
 
       <div className="max-w-3xl mx-auto relative z-10">
-        <div className="bg-white/90 shadow-xl rounded-2xl p-6 sm:p-10">
+        <div className="p-6 sm:p-10">
           <Hero />
           <IntroSection />
           
