@@ -8,11 +8,6 @@ const Hero: React.FC = () => {
         ¡Nos casamos!
       </h2>
       
-      {/* Nombres - Letra elegante tipo script */}
-      <h1 className="text-6xl sm:text-7xl md:text-8xl font-script text-wedding-pink-500 mb-8 animate-fade-in" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.1)' }}>
-        Diego & Sofía
-      </h1>
-      
       {/* Líneas con corazón en el centro */}
       <div className="flex items-center justify-center gap-4 mb-8">
         <div className="h-0.5 w-20 sm:w-32 bg-wedding-green-600"></div>
@@ -21,6 +16,11 @@ const Hero: React.FC = () => {
         </div>
         <div className="h-0.5 w-20 sm:w-32 bg-wedding-green-600"></div>
       </div>
+      
+      {/* Nombres - Letra elegante tipo script */}
+      <h1 className="text-6xl sm:text-7xl md:text-8xl font-script text-wedding-pink-500 mb-8 animate-fade-in" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.1)' }}>
+        Diego & Sofía
+      </h1>
       
       {/* Fecha - Diseño especial como en el PDF */}
       <div className="flex items-center justify-center gap-6 sm:gap-8 mb-8">
