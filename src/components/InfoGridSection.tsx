@@ -7,7 +7,7 @@ const InfoGridSection: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
         {/* Vestimenta - Fuente: Crimson Text (elegante y clásica) */}
         <div className="text-center md:text-left">
-          <h3 className="text-xl font-script text-wedding-green-700 mb-3 flex items-center justify-center md:justify-start gap-2">
+          <h3 className="text-xl font-great-vibes text-wedding-green-700 mb-3 flex items-center justify-center md:justify-start gap-2">
             <span className="inline-block hover:scale-125 hover:rotate-12 transition-transform duration-300">👗</span> Vestimenta
           </h3>
           <p className="text-gray-700 text-sm leading-relaxed font-crimson">
@@ -17,7 +17,7 @@ const InfoGridSection: React.FC = () => {
 
         {/* Regalos - Fuente: Merriweather (moderna y legible) */}
         <div className="text-center md:text-left">
-          <h3 className="text-xl font-script text-wedding-green-700 mb-3 flex items-center justify-center md:justify-start gap-2">
+          <h3 className="text-xl font-great-vibes text-wedding-green-700 mb-3 flex items-center justify-center md:justify-start gap-2">
             <span className="inline-block hover:scale-125 hover:-rotate-12 transition-transform duration-300">🎁</span> Regalos
           </h3>
           <p className="text-gray-700 text-sm leading-relaxed font-crimson">
@@ -27,7 +27,7 @@ const InfoGridSection: React.FC = () => {
 
         {/* Contacto - Fuente: Libre Baskerville (tradicional y sofisticada) */}
         <div className="text-center md:text-left">
-          <h3 className="text-xl font-script text-wedding-green-700 mb-3 flex items-center justify-center md:justify-start gap-2">
+          <h3 className="text-xl font-great-vibes text-wedding-green-700 mb-3 flex items-center justify-center md:justify-start gap-2">
             <span className="inline-block hover:scale-125 hover:rotate-12 transition-transform duration-300 animate-pulse">📞</span> Contacto
           </h3>
           <div className="text-gray-700 text-sm space-y-2 font-crimson">

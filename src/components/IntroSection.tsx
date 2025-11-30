@@ -4,10 +4,10 @@ import { weddingConfig } from '../config';
 const IntroSection: React.FC = () => {
   return (
     <section className="mt-16 text-center">
-      <h2 className="text-4xl sm:text-5xl font-script text-wedding-green-700 mb-4 uppercase tracking-wider">
+      <h2 className="text-4xl sm:text-5xl font-allura text-wedding-green-700 mb-4 uppercase tracking-wider">
         Bienvenidos a nuestra boda
       </h2>
-      <h3 className="text-3xl sm:text-4xl font-script text-wedding-green-700 mb-8 uppercase tracking-wider">
+      <h3 className="text-3xl sm:text-4xl font-allura text-wedding-green-700 mb-8 uppercase tracking-wider">
         en Castillo Bonavía
       </h3>
       

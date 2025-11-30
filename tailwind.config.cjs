@@ -14,6 +14,11 @@ module.exports = {
         'crimson': ['Crimson Text', 'serif'],
         'merriweather': ['Merriweather', 'serif'],
         'baskerville': ['Libre Baskerville', 'serif'],
+        'great-vibes': ['Great Vibes', 'cursive'],
+        'alex-brush': ['Alex Brush', 'cursive'],
+        'allura': ['Allura', 'cursive'],
+        'dancing': ['Dancing Script', 'cursive'],
+        'sacramento': ['Sacramento', 'cursive'],
       },
       colors: {
         'wedding-pink': {
