@@ -17,9 +17,9 @@ module.exports = {
       },
       colors: {
         'wedding-pink': {
-          500: '#ec4899',
-          600: '#db2777',
-          700: '#be185d',
+          500: '#f496b1',
+          600: '#f496b1',
+          700: '#f496b1',
         },
         'wedding-green': {
           500: '#22c55e',
