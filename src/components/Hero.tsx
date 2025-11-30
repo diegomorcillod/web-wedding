@@ -5,7 +5,7 @@ const Hero: React.FC = () => {
     <section className="text-center">
       {/* ¡NOS CASAMOS! - Grande y con efectos */}
       <h2 className="text-3xl sm:text-4xl md:text-5xl font-script text-wedding-green-700 mb-8 tracking-wider uppercase animate-pulse">
-        NOS CASAMOS
+        ¡NOS CASAMOS!
       </h2>
       
       {/* Líneas con corazón en el centro */}
