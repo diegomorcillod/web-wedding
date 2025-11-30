@@ -27,7 +27,7 @@ const RSVPSection: React.FC = () => {
         rel="noreferrer"
         className="inline-block bg-wedding-pink-600 hover:bg-wedding-pink-700 text-white font-crimson font-semibold rounded-full px-8 py-3 shadow-lg transition-colors duration-200"
       >
-        Rellenar formulario
+        Confirmar asistencia
       </a>
     </section>
   );

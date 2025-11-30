@@ -120,16 +120,6 @@ const TimelineSection: React.FC = () => {
           nosotros?
         </h2>
       </div>
-
-      {/* Mensaje final */}
-      <div className="text-center mt-12 animate-fade-in">
-        <p className="text-2xl sm:text-3xl font-script text-wedding-green-700 mb-2">
-          Hasta que el cuerpo aguante
-        </p>
-        <p className="text-lg text-gray-600 italic font-crimson">
-          ¡Que el ritmo no pare!
-        </p>
-      </div>
     </section>
   );
 };
