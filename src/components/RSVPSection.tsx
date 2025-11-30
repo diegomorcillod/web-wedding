@@ -4,7 +4,7 @@ import { weddingConfig } from '../config';
 const RSVPSection: React.FC = () => {
   return (
     <section className="mt-16 text-center">
-      <h2 className="text-3xl font-sacramento text-wedding-green-700 mb-6">
+      <h2 className="text-3xl font-script text-wedding-green-700 mb-6">
         Confirmar asistencia
       </h2>
       

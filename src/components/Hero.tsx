@@ -4,7 +4,7 @@ const Hero: React.FC = () => {
   return (
     <section className="text-center">
       {/* ¡NOS CASAMOS! - Grande y con efectos */}
-      <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-black text-wedding-green-700 mb-8 tracking-wider uppercase animate-pulse">
+      <h2 className="text-4xl sm:text-5xl md:text-6xl font-script text-wedding-green-700 mb-8 tracking-wider uppercase animate-pulse">
         ¡Nos casamos!
       </h2>
       
@@ -35,7 +35,7 @@ const Hero: React.FC = () => {
           <p className="text-7xl sm:text-8xl font-script text-wedding-pink-500 leading-none">
             13
           </p>
-          <p className="text-2xl sm:text-3xl font-display text-wedding-green-700 uppercase tracking-wider mt-2">
+          <p className="text-2xl sm:text-3xl font-script text-wedding-green-700 uppercase tracking-wider mt-2">
             2026
           </p>
         </div>
@@ -49,7 +49,7 @@ const Hero: React.FC = () => {
       </div>
       
       {/* Mes destacado */}
-      <p className="text-3xl sm:text-4xl font-display text-wedding-green-700 uppercase tracking-wider mb-6">
+      <p className="text-3xl sm:text-4xl font-script text-wedding-green-700 uppercase tracking-wider mb-6">
         Junio
       </p>
       
