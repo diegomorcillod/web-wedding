@@ -111,6 +111,16 @@ const TimelineSection: React.FC = () => {
         })}
       </div>
 
+      {/* Título ¿Vienes a celebrarlo con nosotros? */}
+      <div className="text-center mt-20 mb-12">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-script text-wedding-green-700 uppercase tracking-wider mb-4">
+          ¿Vienes a celebrarlo con
+        </h2>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-script text-wedding-green-700 uppercase tracking-wider">
+          nosotros?
+        </h2>
+      </div>
+
       {/* Mensaje final */}
       <div className="text-center mt-12 animate-fade-in">
         <p className="text-2xl sm:text-3xl font-script text-wedding-green-700 mb-2">
