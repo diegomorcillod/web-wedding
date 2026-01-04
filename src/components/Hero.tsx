@@ -3,23 +3,23 @@ import PhotoCollage from './PhotoCollage';
 
 const Hero: React.FC = () => {
   return (
-    <section className="text-center">
+    <section className="text-center px-4">
       {/* ¡NOS CASAMOS! - Grande y con efectos */}
-      <h2 className="text-3xl sm:text-4xl md:text-5xl font-aladdin font-bold text-canva-green mb-8 tracking-wider uppercase animate-pulse">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-aladdin font-bold text-canva-green mb-6 sm:mb-8 tracking-wider uppercase animate-pulse">
         ¡NOS CASAMOS!
       </h2>
       
       {/* Líneas con corazón en el centro */}
-      <div className="flex items-center justify-center gap-4 mb-8">
-        <div className="h-0.5 w-20 sm:w-32 bg-wedding-green-600"></div>
-        <div className="text-3xl sm:text-4xl text-wedding-pink-500 animate-heartbeat">
+      <div className="flex items-center justify-center gap-3 sm:gap-4 mb-6 sm:mb-8">
+        <div className="h-0.5 w-16 sm:w-20 md:w-32 bg-wedding-green-600"></div>
+        <div className="text-2xl sm:text-3xl md:text-4xl text-wedding-pink-500 animate-heartbeat">
           ♥
         </div>
-        <div className="h-0.5 w-20 sm:w-32 bg-wedding-green-600"></div>
+        <div className="h-0.5 w-16 sm:w-20 md:w-32 bg-wedding-green-600"></div>
       </div>
       
       {/* Nombres - Letra elegante tipo script */}
-      <h1 className="text-6xl sm:text-7xl md:text-8xl font-aladdin text-canva-pink mb-8 animate-fade-in" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.1)' }}>
+      <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-aladdin text-canva-pink mb-6 sm:mb-8 animate-fade-in" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.1)' }}>
         Diego & Sofía
       </h1>
       
