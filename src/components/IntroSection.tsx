@@ -16,11 +16,22 @@ const IntroSection: React.FC = () => {
         href={weddingConfig.googleMapsUrl}
         target="_blank"
         rel="noreferrer"
-        className="inline-flex items-center gap-2 bg-wedding-pink-500 hover:bg-wedding-pink-600 text-white font-crimson font-semibold rounded-full px-8 py-3 mb-12 shadow-lg transition-all duration-300 hover:scale-105"
+        className="inline-flex items-center gap-2 bg-wedding-pink-500 hover:bg-wedding-pink-600 text-white font-crimson font-semibold rounded-full px-8 py-3 mb-8 shadow-lg transition-all duration-300 hover:scale-105"
       >
         <span className="text-xl">📍</span>
         Ver ubicación
       </a>
+      
+      {/* Foto del castillo */}
+      <div className="max-w-2xl mx-auto mb-12 px-4">
+        <div className="overflow-hidden rounded-t-[40%] rounded-b-[40%] shadow-xl">
+          <img 
+            src="/images/foto4.jpeg" 
+            alt="Castillo Bonavía" 
+            className="w-full h-80 object-cover"
+          />
+        </div>
+      </div>
       
       <div className="max-w-2xl mx-auto space-y-4 text-canva-green leading-relaxed text-lg font-crimson">
         <p className="font-semibold">
