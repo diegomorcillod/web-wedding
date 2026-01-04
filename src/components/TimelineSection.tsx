@@ -38,11 +38,11 @@ const TimelineSection: React.FC = () => {
     <section className="mt-16 max-w-2xl mx-auto">
       <div className="relative px-8">
         {/* Línea vertical central */}
-        <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-wedding-green-600 transform -translate-x-1/2 opacity-30"></div>
+        <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-canva-green transform -translate-x-1/2 opacity-30"></div>
         
         {/* Línea animada que crece con el scroll */}
         <div 
-          className="absolute left-1/2 top-0 w-0.5 bg-wedding-green-600 transform -translate-x-1/2 transition-all duration-700 ease-out"
+          className="absolute left-1/2 top-0 w-0.5 bg-canva-green transform -translate-x-1/2 transition-all duration-700 ease-out"
           style={{ 
             height: visibleItems.includes(weddingConfig.schedule.length - 1) 
               ? '100%' 
