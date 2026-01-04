@@ -10,7 +10,7 @@ const InfoGridSection: React.FC = () => {
           👗 Vestimenta
         </h3>
         <p className="text-canva-green max-w-xl mx-auto font-crimson leading-relaxed text-lg">
-          {weddingConfig.dressCodeText}
+          Queremos que vengáis como más cómodas/os os sintáis, solo os pedimos un pequeño detalle: <span className="text-canva-pink font-semibold">evitar el color rosa</span>, ya que es el tono elegido para nuestro cortejo de honor. Asimismo, como la celebración será en jardín, recomendamos calzado cómodo para el césped (¡que no queremos tacones atrapados en la hierba!).
         </p>
       </div>
 
