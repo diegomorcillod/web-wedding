@@ -34,7 +34,7 @@ export const weddingConfig = {
       description: "Cena en el salón del castillo con sorpresas y mucha diversión."
     },
     {
-      time: "12:00h",
+      time: "00:00h",
       title: "¡Que el ritmo no pare!",
       description: "Para los que aguanten hasta el final, la fiesta continúa hasta que el cuerpo aguante."
     }
