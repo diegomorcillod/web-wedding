@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
       {/* Fecha - Diseño especial como en el PDF */}
       <div className="flex items-center justify-center gap-6 sm:gap-8 mb-8">
         <div className="text-center">
-          <p className="text-sm sm:text-base uppercase tracking-widest text-wedding-green-700 font-semibold mb-2">
+          <p className="text-sm sm:text-base uppercase tracking-widest text-canva-green font-semibold mb-2">
             Sábado
           </p>
           <div className="h-0.5 w-20 bg-wedding-green-600 mx-auto"></div>
@@ -44,7 +44,7 @@ const Hero: React.FC = () => {
         </div>
         
         <div className="text-center">
-          <p className="text-sm sm:text-base uppercase tracking-widest text-wedding-green-700 font-semibold mb-2">
+          <p className="text-sm sm:text-base uppercase tracking-widest text-canva-green font-semibold mb-2">
             19:00h
           </p>
           <div className="h-0.5 w-20 bg-wedding-green-600 mx-auto"></div>
