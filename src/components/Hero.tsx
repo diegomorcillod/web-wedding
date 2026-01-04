@@ -51,7 +51,7 @@ const Hero: React.FC = () => {
         </div>
       </div>
       
-      <p className="text-gray-600 italic max-w-md mx-auto text-lg">
+      <p className="text-gray-600 italic max-w-md mx-auto text-lg text-canva-green">
         ¡Nos emociona celebrar este día rodeados de nuestra gente favorita!
       </p>
     </section>
