@@ -1,4 +1,5 @@
 import React from 'react';
+import PhotoCollage from './PhotoCollage';
 
 const Hero: React.FC = () => {
   return (
@@ -54,6 +55,9 @@ const Hero: React.FC = () => {
       <p className="text-gray-600 italic max-w-md mx-auto text-lg text-canva-green">
         ¡Nos emociona celebrar este día rodeados de nuestra gente favorita!
       </p>
+      
+      {/* Collage de fotos */}
+      <PhotoCollage />
     </section>
   );
 };
