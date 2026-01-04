@@ -22,8 +22,8 @@ const IntroSection: React.FC = () => {
         Ver ubicación
       </a>
       
-      <div className="max-w-2xl mx-auto space-y-4 text-gray-700 leading-relaxed text-lg font-crimson">
-        <p className="font-semibold text-wedding-green-700">
+      <div className="max-w-2xl mx-auto space-y-4 text-canva-green leading-relaxed text-lg font-crimson">
+        <p className="font-semibold">
           Nos hace mucha ilusión compartir este día con vosotros.
         </p>
         <p>
