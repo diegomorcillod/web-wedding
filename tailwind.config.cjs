@@ -34,6 +34,7 @@ module.exports = {
         },
         'canva-green': '#2e6417',
         'canva-green-light': '#63964c',
+        'canva-pink': '#e9adb1',
       },
     },
   },
