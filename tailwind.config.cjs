@@ -19,6 +19,7 @@ module.exports = {
         'allura': ['Allura', 'cursive'],
         'dancing': ['Dancing Script', 'cursive'],
         'sacramento': ['Sacramento', 'cursive'],
+        'sansita': ['Sansita', 'sans-serif'],
       },
       colors: {
         'wedding-pink': {
