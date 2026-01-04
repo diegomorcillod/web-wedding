@@ -20,6 +20,7 @@ module.exports = {
         'dancing': ['Dancing Script', 'cursive'],
         'sacramento': ['Sacramento', 'cursive'],
         'sansita': ['Sansita', 'sans-serif'],
+        'aladdin': ['Aladdin', 'cursive'],
       },
       colors: {
         'wedding-pink': {
