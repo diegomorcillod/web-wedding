@@ -22,10 +22,10 @@ const PhotoCollage: React.FC = () => {
           />
         </div>
         
-        {/* Foto 3 - Nota: .heic no es compatible con navegadores, necesitarás convertirla a .jpg */}
+        {/* Foto 3 */}
         <div className="overflow-hidden rounded-t-[30%] rounded-b-[50%] shadow-lg">
           <img 
-            src="/images/foto3.heic" 
+            src="/images/foto3.jpeg" 
             alt="Diego y Sofía" 
             className="w-full h-64 object-cover"
           />
