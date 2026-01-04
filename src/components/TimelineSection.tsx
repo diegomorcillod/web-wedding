@@ -74,7 +74,7 @@ const TimelineSection: React.FC = () => {
                   <p className="text-lg font-bold text-canva-green mb-1 font-crimson">
                     {event.time}
                   </p>
-                  <h3 className="text-xl font-alfa-slab text-wedding-pink-600 mb-2">
+                  <h3 className="text-xl font-crimson text-canva-pink mb-2">
                     {event.title}
                   </h3>
                   <p className="text-sm text-canva-green leading-relaxed font-crimson">
