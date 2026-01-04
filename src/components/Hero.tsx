@@ -32,13 +32,13 @@ const Hero: React.FC = () => {
         </div>
         
         <div className="text-center">
-          <p className="text-2xl sm:text-3xl font-script text-wedding-green-700 uppercase tracking-wider mb-2">
+          <p className="text-2xl sm:text-3xl font-script text-canva-green-light uppercase tracking-wider mb-2">
             Junio
           </p>
           <p className="text-7xl sm:text-8xl font-script text-wedding-pink-500 leading-none">
             13
           </p>
-          <p className="text-2xl sm:text-3xl font-script text-wedding-green-700 uppercase tracking-wider mt-2">
+          <p className="text-2xl sm:text-3xl font-script text-canva-green-light uppercase tracking-wider mt-2">
             2026
           </p>
         </div>

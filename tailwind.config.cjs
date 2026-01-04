@@ -33,6 +33,7 @@ module.exports = {
           700: '#12622f',
         },
         'canva-green': '#2e6417',
+        'canva-green-light': '#63964c',
       },
     },
   },
