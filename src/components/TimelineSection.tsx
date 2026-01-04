@@ -44,7 +44,9 @@ const TimelineSection: React.FC = () => {
         <div 
           className="absolute left-1/2 top-0 w-0.5 bg-wedding-green-600 transform -translate-x-1/2 transition-all duration-700 ease-out"
           style={{ 
-            height: `${(visibleItems.length / weddingConfig.schedule.length) * 100}%`,
+            height: visibleItems.includes(weddingConfig.schedule.length - 1) 
+              ? '100%' 
+              : `${(Math.max(...visibleItems, -1) + 1) / weddingConfig.schedule.length * 100}%`,
           }}
         ></div>
 
