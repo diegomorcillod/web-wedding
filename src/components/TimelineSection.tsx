@@ -71,13 +71,13 @@ const TimelineSection: React.FC = () => {
                 }`}
               >
                 <div className={`text-${isLeft ? 'right' : 'left'} pr-${isLeft ? '4' : '0'} pl-${isLeft ? '0' : '4'}`}>
-                  <p className="text-lg font-bold text-wedding-green-700 mb-1 font-crimson">
+                  <p className="text-lg font-bold text-canva-green mb-1 font-crimson">
                     {event.time}
                   </p>
                   <h3 className="text-xl font-alfa-slab text-wedding-pink-600 mb-2">
                     {event.title}
                   </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed font-crimson">
+                  <p className="text-sm text-canva-green leading-relaxed font-crimson">
                     {event.description}
                   </p>
                 </div>
