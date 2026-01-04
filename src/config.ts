@@ -4,7 +4,7 @@ export const weddingConfig = {
   weddingTime: "19:00h",
   weddingLocation: "Castillo Bonavía",
   googleMapsUrl: "https://maps.google.com/?q=Castillo+Bonavia+Pedrola+Zaragoza",
-  rsvpFormUrl: "https://forms.gle/tu-formulario",
+  rsvpFormUrl: "https://forms.gle/oJm1P6sEymCNAqqF8",
   rsvpDeadline: "13 de mayo de 2026",
   contacts: [
     { name: "Sofía", phone: "675 128 087" },
