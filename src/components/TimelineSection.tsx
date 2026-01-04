@@ -62,7 +62,7 @@ const TimelineSection: React.FC = () => {
             >
               {/* Contenido */}
               <div
-                className={`w-5/12 transition-all duration-700 ${
+                className={`w-5/12 transition-all duration-700 relative ${
                   isVisible
                     ? 'opacity-100 translate-x-0'
                     : isLeft
@@ -81,6 +81,16 @@ const TimelineSection: React.FC = () => {
                     {event.description}
                   </p>
                 </div>
+                
+                {/* Línea punteada que conecta al círculo */}
+                <div
+                  className={`absolute top-1/2 ${
+                    isLeft ? 'right-0 mr-[-2rem]' : 'left-0 ml-[-2rem]'
+                  } w-8 border-t-2 border-dashed border-wedding-green-400 transition-all duration-700 ${
+                    isVisible ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'
+                  }`}
+                  style={{ transformOrigin: isLeft ? 'right' : 'left' }}
+                ></div>
               </div>
 
               {/* Punto central con icono */}
@@ -96,16 +106,6 @@ const TimelineSection: React.FC = () => {
 
               {/* Espacio vacío del otro lado */}
               <div className="w-5/12"></div>
-
-              {/* Línea punteada que conecta */}
-              <div
-                className={`absolute top-1/2 ${
-                  isLeft ? 'left-1/2 ml-6' : 'right-1/2 mr-6'
-                } w-8 border-t-2 border-dashed border-wedding-green-400 transition-all duration-700 ${
-                  isVisible ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'
-                }`}
-                style={{ transformOrigin: isLeft ? 'left' : 'right' }}
-              ></div>
             </div>
           );
         })}
