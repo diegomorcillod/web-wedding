@@ -98,7 +98,7 @@ const TimelineSection: React.FC = () => {
               {/* Punto central con icono */}
               <div className="w-2/12 flex justify-center">
                 <div
-                  className={`w-12 h-12 rounded-full bg-white border-4 border-wedding-green-600 flex items-center justify-center shadow-lg z-10 transition-all duration-500 ${
+                  className={`w-12 h-12 rounded-full bg-white border-4 border-canva-green flex items-center justify-center shadow-lg z-10 transition-all duration-500 ${
                     isVisible ? 'scale-100 rotate-0' : 'scale-0 rotate-180'
                   }`}
                 >
