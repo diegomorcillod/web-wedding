@@ -21,6 +21,7 @@ module.exports = {
         'sacramento': ['Sacramento', 'cursive'],
         'sansita': ['Sansita', 'sans-serif'],
         'aladdin': ['Aladdin', 'cursive'],
+        'slackey': ['Slackey', 'cursive'],
       },
       colors: {
         'wedding-pink': {
