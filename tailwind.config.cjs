@@ -21,7 +21,7 @@ module.exports = {
         'sacramento': ['Sacramento', 'cursive'],
         'sansita': ['Sansita', 'sans-serif'],
         'aladdin': ['Aladdin', 'cursive'],
-        'slackey': ['Slackey', 'cursive'],
+        'alfa-slab': ['Alfa Slab One', 'cursive'],
       },
       colors: {
         'wedding-pink': {
