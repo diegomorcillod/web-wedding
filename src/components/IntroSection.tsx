@@ -16,7 +16,7 @@ const IntroSection: React.FC = () => {
         href={weddingConfig.googleMapsUrl}
         target="_blank"
         rel="noreferrer"
-        className="inline-flex items-center gap-3 bg-wedding-pink-500 hover:bg-wedding-pink-600 text-white font-crimson font-bold text-lg rounded-full px-10 py-4 mb-8 shadow-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl"
+        className="inline-flex items-center gap-3 bg-canva-pink hover:bg-[#B07878] text-white font-crimson font-bold text-lg rounded-full px-10 py-4 mb-8 shadow-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl"
       >
         <span className="text-2xl">📍</span>
         Ver ubicación
