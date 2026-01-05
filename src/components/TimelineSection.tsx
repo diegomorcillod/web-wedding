@@ -37,47 +37,19 @@ const TimelineSection: React.FC = () => {
   return (
     <section className="mt-16 max-w-4xl mx-auto px-4">
       <div className="relative px-4 sm:px-8">
-        {/* SVG con línea curva de fondo */}
-        <svg 
-          className="absolute left-1/2 top-0 transform -translate-x-1/2 opacity-30" 
-          width="300" 
-          height="100%" 
-          style={{ minHeight: '100%' }}
-          viewBox="0 0 300 1500"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M150,0 Q20,75 150,150 Q280,225 150,300 Q20,375 150,450 Q280,525 150,600 Q20,675 150,750 Q280,825 150,900 Q20,975 150,1050 Q280,1125 150,1200 Q20,1275 150,1350 Q280,1425 150,1500"
-            stroke="#2e6417"
-            strokeWidth="3"
-            fill="none"
-          />
-        </svg>
+        {/* Línea vertical recta que pasa por los círculos */}
+        <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 bg-canva-green h-full opacity-30"></div>
         
-        {/* SVG con línea curva animada que crece con el scroll */}
-        <svg 
-          className="absolute left-1/2 top-0 transform -translate-x-1/2 transition-all duration-700 ease-out" 
-          width="300" 
-          height="100%"
-          viewBox="0 0 300 1500"
-          preserveAspectRatio="none"
+        {/* Línea animada que crece con el scroll */}
+        <div 
+          className="absolute left-1/2 transform -translate-x-1/2 w-0.5 bg-canva-green transition-all duration-700 ease-out"
           style={{ 
-            minHeight: '100%',
-            clipPath: visibleItems.includes(weddingConfig.schedule.length - 1) 
-              ? 'inset(0 0 0 0)' 
-              : `inset(0 0 ${100 - (Math.max(...visibleItems, -1) + 1) / weddingConfig.schedule.length * 100}% 0)`
+            height: `${(Math.max(...visibleItems, -1) + 1) / weddingConfig.schedule.length * 100}%`
           }}
-        >
-          <path
-            d="M150,0 Q20,75 150,150 Q280,225 150,300 Q20,375 150,450 Q280,525 150,600 Q20,675 150,750 Q280,825 150,900 Q20,975 150,1050 Q280,1125 150,1200 Q20,1275 150,1350 Q280,1425 150,1500"
-            stroke="#2e6417"
-            strokeWidth="3"
-            fill="none"
-          />
-        </svg>
+        ></div>
 
         {weddingConfig.schedule.map((event, index) => {
-          const isLeft = index % 2 === 0;
+          const isLeft = index % 2 !== 0; // Invertido: ahora impares a la izquierda
           const isVisible = visibleItems.includes(index);
 
           return (
@@ -98,7 +70,7 @@ const TimelineSection: React.FC = () => {
                     : 'opacity-0 translate-x-10'
                 }`}
               >
-                <div className={`text-${isLeft ? 'right' : 'left'} ${isLeft ? 'pr-8 sm:pr-16 md:pr-24 lg:pr-32' : 'pl-8 sm:pl-16 md:pl-24 lg:pl-32'}`}>
+                <div className={`text-${isLeft ? 'right' : 'left'} ${isLeft ? 'pr-4 sm:pr-8 md:pr-12' : 'pl-4 sm:pl-8 md:pl-12'}`}>
                   <p className="text-lg sm:text-xl md:text-2xl font-bold text-canva-green mb-2 font-crimson">
                     {event.time}
                   </p>
@@ -114,7 +86,7 @@ const TimelineSection: React.FC = () => {
                 <div
                   className={`absolute top-1/2 ${
                     isLeft ? 'left-full ml-2 sm:ml-4' : 'right-full mr-2 sm:mr-4'
-                  } w-8 sm:w-12 md:w-20 lg:w-28 border-t-2 border-dashed border-wedding-green-400 transition-all duration-700 ${
+                  } w-4 sm:w-8 md:w-12 border-t-2 border-dashed border-canva-green transition-all duration-700 ${
                     isVisible ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'
                   }`}
                   style={{ transformOrigin: isLeft ? 'left' : 'right' }}
