@@ -10,7 +10,7 @@ const RSVPSection: React.FC = () => {
       <p className="text-canva-green mb-8 max-w-xl mx-auto font-crimson leading-relaxed text-lg">
         Hemos preparado un formulario donde, aparte de confirmar la asistencia, 
         os preguntamos información importante a tener en cuenta para que ese día 
-        no os tengáis que preocupar de nada 😊
+        no os tengáis que preocupar de nada.
       </p>
       <p className="text-canva-green mb-8 max-w-xl mx-auto font-crimson leading-relaxed text-lg">
         Para organizarnos bien y cuidar cada detalle, por favor rellena el 
