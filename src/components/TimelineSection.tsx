@@ -4,8 +4,33 @@ import { weddingConfig } from '../config';
 const TimelineSection: React.FC = () => {
   const [visibleItems, setVisibleItems] = useState<number[]>([]);
   const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const circleRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const [circlePaths, setCirclePaths] = useState<string>('');
 
   useEffect(() => {
+    const updatePath = () => {
+      if (circleRefs.current.every(ref => ref !== null)) {
+        const containerRect = circleRefs.current[0]?.parentElement?.parentElement?.getBoundingClientRect();
+        if (!containerRect) return;
+
+        const pathData = circleRefs.current
+          .map((ref, index) => {
+            if (!ref) return null;
+            const rect = ref.getBoundingClientRect();
+            const x = rect.left - containerRect.left + rect.width / 2;
+            const y = rect.top - containerRect.top + rect.height / 2;
+            return index === 0 ? `M ${x} ${y}` : `L ${x} ${y}`;
+          })
+          .filter(Boolean)
+          .join(' ');
+        
+        setCirclePaths(pathData);
+      }
+    };
+
+    updatePath();
+    window.addEventListener('resize', updatePath);
+    
     const observers = itemRefs.current.map((ref, index) => {
       const observer = new IntersectionObserver(
         (entries) => {
@@ -29,6 +54,7 @@ const TimelineSection: React.FC = () => {
 
     return () => {
       observers.forEach((observer) => observer.disconnect());
+      window.removeEventListener('resize', updatePath);
     };
   }, []);
 
@@ -38,50 +64,40 @@ const TimelineSection: React.FC = () => {
     <section className="mt-16 max-w-4xl mx-auto px-4">
       <div className="relative px-4 sm:px-8">
         {/* SVG Línea en zigzag de fondo (opaca) */}
-        <svg 
-          className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-30"
-          style={{ minHeight: '100%' }}
-        >
-          <path
-            d={weddingConfig.schedule.map((_, index) => {
-              const isLeft = index % 2 === 0;
-              const yPosition = index * 160; // Aproximadamente mb-16 en px
-              const xPosition = isLeft ? '7%' : '93%'; // Posición izquierda o derecha
-              return index === 0 
-                ? `M ${xPosition} ${yPosition}` 
-                : `L ${xPosition} ${yPosition}`;
-            }).join(' ')}
-            stroke="#2e6417"
-            strokeWidth="3"
-            fill="none"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
+        {circlePaths && (
+          <svg 
+            className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-30 z-0"
+            style={{ minHeight: '100%' }}
+          >
+            <path
+              d={circlePaths}
+              stroke="#2e6417"
+              strokeWidth="3"
+              fill="none"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        )}
 
         {/* SVG Línea en zigzag animada que se va revelando */}
-        <svg 
-          className="absolute top-0 left-0 w-full h-full pointer-events-none transition-all duration-700"
-          style={{ minHeight: '100%' }}
-        >
-          <path
-            d={weddingConfig.schedule.map((_, index) => {
-              const isLeft = index % 2 === 0;
-              const yPosition = index * 160;
-              const xPosition = isLeft ? '7%' : '93%';
-              return index === 0 
-                ? `M ${xPosition} ${yPosition}` 
-                : `L ${xPosition} ${yPosition}`;
-            }).join(' ')}
-            stroke="#2e6417"
-            strokeWidth="3"
-            fill="none"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeDasharray="2000"
-            strokeDashoffset={2000 - (Math.max(...visibleItems, -1) + 1) / weddingConfig.schedule.length * 2000}
-          />
-        </svg>
+        {circlePaths && (
+          <svg 
+            className="absolute top-0 left-0 w-full h-full pointer-events-none transition-all duration-700 z-0"
+            style={{ minHeight: '100%' }}
+          >
+            <path
+              d={circlePaths}
+              stroke="#2e6417"
+              strokeWidth="3"
+              fill="none"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeDasharray="2000"
+              strokeDashoffset={2000 - (Math.max(...visibleItems, -1) + 1) / weddingConfig.schedule.length * 2000}
+            />
+          </svg>
+        )}
 
         {weddingConfig.schedule.map((event, index) => {
           const isLeft = index % 2 === 0; // Par = izquierda, Impar = derecha
@@ -98,7 +114,8 @@ const TimelineSection: React.FC = () => {
                 <div className="flex items-center justify-start">
                   {/* Círculo con emoji */}
                   <div
-                    className={`w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white border-4 border-canva-green flex items-center justify-center shadow-lg flex-shrink-0 transition-all duration-500 ${
+                    ref={(el) => (circleRefs.current[index] = el)}
+                    className={`w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white border-4 border-canva-green flex items-center justify-center shadow-lg flex-shrink-0 transition-all duration-500 z-10 relative ${
                       isVisible ? 'scale-100 rotate-0' : 'scale-0 rotate-180'
                     }`}
                   >
@@ -144,7 +161,8 @@ const TimelineSection: React.FC = () => {
                   
                   {/* Círculo con emoji */}
                   <div
-                    className={`w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white border-4 border-canva-green flex items-center justify-center shadow-lg flex-shrink-0 transition-all duration-500 ${
+                    ref={(el) => (circleRefs.current[index] = el)}
+                    className={`w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white border-4 border-canva-green flex items-center justify-center shadow-lg flex-shrink-0 transition-all duration-500 z-10 relative ${
                       isVisible ? 'scale-100 rotate-0' : 'scale-0 rotate-180'
                     }`}
                   >
