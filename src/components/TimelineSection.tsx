@@ -64,7 +64,7 @@ const TimelineSection: React.FC = () => {
             >
               {/* Contenido */}
               <div
-                className={`w-5/12 transition-all duration-700 relative ${
+                className={`w-[45%] sm:w-5/12 transition-all duration-700 relative ${
                   isVisible
                     ? 'opacity-100 translate-x-0'
                     : isLeft
@@ -72,14 +72,14 @@ const TimelineSection: React.FC = () => {
                     : 'opacity-0 translate-x-10'
                 }`}
               >
-                <div className={`text-${isLeft ? 'right' : 'left'} ${isLeft ? 'pr-6 sm:pr-10' : 'pl-6 sm:pl-10'}`}>
-                  <p className="text-xl sm:text-2xl font-bold text-canva-green mb-2 font-crimson">
+                <div className={`text-${isLeft ? 'right' : 'left'} ${isLeft ? 'pr-3 sm:pr-6 md:pr-10' : 'pl-3 sm:pl-6 md:pl-10'}`}>
+                  <p className="text-lg sm:text-xl md:text-2xl font-bold text-canva-green mb-2 font-crimson">
                     {event.time}
                   </p>
-                  <h3 className="text-2xl sm:text-3xl font-crimson text-canva-pink mb-3">
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-crimson text-canva-pink mb-3">
                     {event.title}
                   </h3>
-                  <p className="text-base sm:text-lg text-canva-green leading-relaxed font-crimson">
+                  <p className="text-sm sm:text-base md:text-lg text-canva-green leading-relaxed font-crimson">
                     {event.description}
                   </p>
                 </div>
@@ -87,8 +87,8 @@ const TimelineSection: React.FC = () => {
                 {/* Línea punteada que conecta al círculo */}
                 <div
                   className={`absolute top-1/2 ${
-                    isLeft ? 'right-0 mr-[-3rem] sm:mr-[-5rem]' : 'left-0 ml-[-3rem] sm:ml-[-5rem]'
-                  } w-12 sm:w-20 border-t-2 border-dashed border-wedding-green-400 transition-all duration-700 ${
+                    isLeft ? 'right-0 mr-[-1.5rem] sm:mr-[-3rem] md:mr-[-5rem]' : 'left-0 ml-[-1.5rem] sm:ml-[-3rem] md:ml-[-5rem]'
+                  } w-6 sm:w-12 md:w-20 border-t-2 border-dashed border-wedding-green-400 transition-all duration-700 ${
                     isVisible ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'
                   }`}
                   style={{ transformOrigin: isLeft ? 'right' : 'left' }}
@@ -96,7 +96,7 @@ const TimelineSection: React.FC = () => {
               </div>
 
               {/* Punto central con icono */}
-              <div className="w-2/12 flex justify-center">
+              <div className="w-[10%] sm:w-2/12 flex justify-center">
                 <div
                   className={`w-12 h-12 rounded-full bg-white border-4 border-canva-green flex items-center justify-center shadow-lg z-10 transition-all duration-500 ${
                     isVisible ? 'scale-100 rotate-0' : 'scale-0 rotate-180'
@@ -107,7 +107,7 @@ const TimelineSection: React.FC = () => {
               </div>
 
               {/* Espacio vacío del otro lado */}
-              <div className="w-5/12"></div>
+              <div className="w-[45%] sm:w-5/12"></div>
             </div>
           );
         })}
