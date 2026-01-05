@@ -13,16 +13,31 @@ const TimelineSection: React.FC = () => {
         const containerRect = circleRefs.current[0]?.parentElement?.parentElement?.getBoundingClientRect();
         if (!containerRect) return;
 
-        const pathData = circleRefs.current
-          .map((ref, index) => {
-            if (!ref) return null;
-            const rect = ref.getBoundingClientRect();
-            const x = rect.left - containerRect.left + rect.width / 2;
-            const y = rect.top - containerRect.top + rect.height / 2;
-            return index === 0 ? `M ${x} ${y}` : `L ${x} ${y}`;
-          })
-          .filter(Boolean)
-          .join(' ');
+        const points = circleRefs.current.map((ref) => {
+          if (!ref) return null;
+          const rect = ref.getBoundingClientRect();
+          const x = rect.left - containerRect.left + rect.width / 2;
+          const y = rect.top - containerRect.top + rect.height / 2;
+          return { x, y };
+        }).filter(Boolean) as { x: number; y: number }[];
+
+        // Crear path con curvas suaves (quadratic bezier)
+        let pathData = `M ${points[0].x} ${points[0].y}`;
+        
+        for (let i = 1; i < points.length; i++) {
+          const prev = points[i - 1];
+          const curr = points[i];
+          
+          // Punto de control para la curva - en el medio pero desplazado
+          const midX = (prev.x + curr.x) / 2;
+          const midY = (prev.y + curr.y) / 2;
+          
+          // Curvatura hacia el centro para evitar el texto
+          const isGoingRight = curr.x > prev.x;
+          const controlX = midX + (isGoingRight ? -80 : 80);
+          
+          pathData += ` Q ${controlX} ${midY}, ${curr.x} ${curr.y}`;
+        }
         
         setCirclePaths(pathData);
       }
