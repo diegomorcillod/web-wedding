@@ -72,14 +72,14 @@ const TimelineSection: React.FC = () => {
                     : 'opacity-0 translate-x-10'
                 }`}
               >
-                <div className={`text-${isLeft ? 'right' : 'left'} pr-${isLeft ? '8' : '0'} pl-${isLeft ? '0' : '8'}`}>
-                  <p className="text-xl font-bold text-canva-green mb-2 font-crimson">
+                <div className={`text-${isLeft ? 'right' : 'left'} ${isLeft ? 'pr-4 sm:pr-8' : 'pl-4 sm:pl-8'}`}>
+                  <p className="text-lg sm:text-xl font-bold text-canva-green mb-2 font-crimson">
                     {event.time}
                   </p>
-                  <h3 className="text-2xl font-crimson text-canva-pink mb-3">
+                  <h3 className="text-xl sm:text-2xl font-crimson text-canva-pink mb-3">
                     {event.title}
                   </h3>
-                  <p className="text-base text-canva-green leading-relaxed font-crimson">
+                  <p className="text-sm sm:text-base text-canva-green leading-relaxed font-crimson">
                     {event.description}
                   </p>
                 </div>
@@ -87,8 +87,8 @@ const TimelineSection: React.FC = () => {
                 {/* Línea punteada que conecta al círculo */}
                 <div
                   className={`absolute top-1/2 ${
-                    isLeft ? 'right-0 mr-[-4rem]' : 'left-0 ml-[-4rem]'
-                  } w-16 border-t-2 border-dashed border-wedding-green-400 transition-all duration-700 ${
+                    isLeft ? 'right-0 mr-[-2rem] sm:mr-[-4rem]' : 'left-0 ml-[-2rem] sm:ml-[-4rem]'
+                  } w-8 sm:w-16 border-t-2 border-dashed border-wedding-green-400 transition-all duration-700 ${
                     isVisible ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'
                   }`}
                   style={{ transformOrigin: isLeft ? 'right' : 'left' }}
