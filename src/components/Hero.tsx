@@ -5,7 +5,7 @@ const Hero: React.FC = () => {
   return (
     <section className="text-center px-4">
       {/* ¡NOS CASAMOS! - Grande y con efectos */}
-      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-aladdin font-bold text-canva-green mb-6 sm:mb-8 tracking-wider uppercase animate-pulse">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-script font-bold text-canva-green mb-6 sm:mb-8 tracking-wider uppercase animate-pulse">
         ¡NOS CASAMOS!
       </h2>
       
@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
       </div>
       
       {/* Nombres - Letra elegante tipo script */}
-      <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-aladdin text-canva-pink mb-6 sm:mb-8 animate-fade-in" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.1)' }}>
+      <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-script text-canva-pink mb-6 sm:mb-8 animate-fade-in" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.1)' }}>
         Diego & Sofía
       </h1>
       
@@ -33,13 +33,13 @@ const Hero: React.FC = () => {
         </div>
         
         <div className="text-center">
-          <p className="text-2xl sm:text-3xl font-aladdin text-canva-green-light uppercase tracking-wider mb-2">
+          <p className="text-2xl sm:text-3xl font-script text-canva-green-light uppercase tracking-wider mb-2">
             Junio
           </p>
-          <p className="text-7xl sm:text-8xl font-aladdin text-canva-pink leading-none">
+          <p className="text-7xl sm:text-8xl font-script text-canva-pink leading-none">
             13
           </p>
-          <p className="text-2xl sm:text-3xl font-aladdin text-canva-green-light uppercase tracking-wider mt-2">
+          <p className="text-2xl sm:text-3xl font-script text-canva-green-light uppercase tracking-wider mt-2">
             2026
           </p>
         </div>

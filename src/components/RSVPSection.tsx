@@ -21,7 +21,7 @@ const RSVPSection: React.FC = () => {
         href={weddingConfig.rsvpFormUrl}
         target="_blank"
         rel="noreferrer"
-        className="inline-block bg-wedding-pink-600 hover:bg-wedding-pink-700 text-white font-crimson font-semibold rounded-full px-8 py-3 shadow-lg transition-colors duration-200"
+        className="inline-flex items-center gap-2 bg-wedding-pink-600 hover:bg-wedding-pink-700 text-white font-crimson font-bold text-lg rounded-full px-10 py-4 shadow-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl"
       >
         Confirmar asistencia
       </a>
