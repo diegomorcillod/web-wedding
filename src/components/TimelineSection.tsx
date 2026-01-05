@@ -98,11 +98,11 @@ const TimelineSection: React.FC = () => {
               {/* Punto central con icono */}
               <div className="w-[10%] sm:w-2/12 flex justify-center flex-shrink-0">
                 <div
-                  className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white border-4 border-canva-green flex items-center justify-center shadow-lg z-10 transition-all duration-500 ${
+                  className={`w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white border-4 border-canva-green flex items-center justify-center shadow-lg z-10 transition-all duration-500 ${
                     isVisible ? 'scale-100 rotate-0' : 'scale-0 rotate-180'
                   }`}
                 >
-                  <span className="text-xl sm:text-2xl">{icons[index]}</span>
+                  <span className="text-2xl sm:text-3xl">{icons[index]}</span>
                 </div>
               </div>
 
