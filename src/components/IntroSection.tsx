@@ -5,7 +5,7 @@ const IntroSection: React.FC = () => {
   return (
     <section className="mt-16 text-center">
       <h2 className="text-3xl sm:text-4xl font-script text-canva-green mb-4 uppercase tracking-wider">
-        Bienvenidos a nuestra boda
+        ¡Bienvenidos a nuestra boda!
       </h2>
       <h3 className="text-2xl sm:text-3xl font-script text-canva-green-light mb-8 uppercase tracking-wider">
         en Castillo Bonavía
