@@ -114,12 +114,9 @@ const TimelineSection: React.FC = () => {
       </div>
 
       {/* Título ¿Vienes a celebrarlo con nosotros? */}
-      <div className="text-center mt-20 mb-12">
-        <h2 className="text-2xl sm:text-3xl font-script text-canva-green uppercase tracking-wider mb-4">
-          ¿Vienes a celebrarlo con
-        </h2>
+      <div className="text-center mt-20 mb-12 px-4">
         <h2 className="text-2xl sm:text-3xl font-script text-canva-green uppercase tracking-wider">
-          nosotros?
+          ¿Vienes a celebrarlo con nosotros?
         </h2>
       </div>
     </section>
