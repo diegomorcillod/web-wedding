@@ -29,12 +29,12 @@ export const weddingConfig = {
       description: "Cóctel de bienvenida con canapés, bebidas y buena música para empezar la fiesta."
     },
     {
-      time: "22:00h",
+      time: "21:30h",
       title: "Banquete y diversión",
       description: "Cena en el salón del castillo con sorpresas y mucha diversión."
     },
     {
-      time: "00:00h",
+      time: "00:30h",
       title: "¡Que el ritmo no pare!",
       description: "Para los que aguanten hasta el final, la fiesta continúa hasta que el cuerpo aguante."
     }
