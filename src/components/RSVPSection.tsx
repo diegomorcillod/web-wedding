@@ -3,7 +3,7 @@ import { weddingConfig } from '../config';
 
 const RSVPSection: React.FC = () => {
   return (
-    <section className="mt-16 text-center">
+    <section className="mt-4 text-center">
       <p className="text-canva-green mb-6 max-w-xl mx-auto font-crimson">
         Nos encantaría contar contigo en este día tan especial.
       </p>
