@@ -54,7 +54,7 @@ const TimelineSection: React.FC = () => {
                   {/* Círculo con emoji */}
                   <div
                     ref={(el) => (circleRefs.current[index] = el)}
-                    className={`w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white border-4 border-canva-green flex items-center justify-center shadow-lg flex-shrink-0 transition-all duration-500 z-10 relative ${
+                    className={`w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white border-4 border-canva-burgundy flex items-center justify-center shadow-lg flex-shrink-0 transition-all duration-500 z-10 relative ${
                       isVisible ? 'scale-100 rotate-0' : 'scale-0 rotate-180'
                     }`}
                   >
@@ -101,7 +101,7 @@ const TimelineSection: React.FC = () => {
                   {/* Círculo con emoji */}
                   <div
                     ref={(el) => (circleRefs.current[index] = el)}
-                    className={`w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white border-4 border-canva-green flex items-center justify-center shadow-lg flex-shrink-0 transition-all duration-500 z-10 relative ${
+                    className={`w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white border-4 border-canva-burgundy flex items-center justify-center shadow-lg flex-shrink-0 transition-all duration-500 z-10 relative ${
                       isVisible ? 'scale-100 rotate-0' : 'scale-0 rotate-180'
                     }`}
                   >
