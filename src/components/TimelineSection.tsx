@@ -66,8 +66,8 @@ const TimelineSection: React.FC = () => {
         {/* SVG Línea en zigzag de fondo (opaca) */}
         {circlePaths && (
           <svg 
-            className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-30 z-0"
-            style={{ minHeight: '100%' }}
+            className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-30"
+            style={{ minHeight: '100%', zIndex: -1 }}
           >
             <path
               d={circlePaths}
@@ -83,8 +83,8 @@ const TimelineSection: React.FC = () => {
         {/* SVG Línea en zigzag animada que se va revelando */}
         {circlePaths && (
           <svg 
-            className="absolute top-0 left-0 w-full h-full pointer-events-none transition-all duration-700 z-0"
-            style={{ minHeight: '100%' }}
+            className="absolute top-0 left-0 w-full h-full pointer-events-none transition-all duration-700"
+            style={{ minHeight: '100%', zIndex: -1 }}
           >
             <path
               d={circlePaths}
@@ -107,7 +107,7 @@ const TimelineSection: React.FC = () => {
             <div
               key={index}
               ref={(el) => (itemRefs.current[index] = el)}
-              className="relative mb-16 last:mb-0"
+              className="relative mb-16 last:mb-0 z-10"
             >
               {isLeft ? (
                 // Layout IZQUIERDA: emoji + texto
