@@ -72,7 +72,7 @@ const TimelineSection: React.FC = () => {
                     : 'opacity-0 translate-x-10'
                 }`}
               >
-                <div className={`text-${isLeft ? 'right' : 'left'} ${isLeft ? 'pr-4 sm:pr-8 md:pr-12' : 'pl-4 sm:pl-8 md:pl-12'}`}>
+                <div className={`text-${isLeft ? 'right' : 'left'} ${isLeft ? 'pr-6 sm:pr-12 md:pr-16' : 'pl-6 sm:pl-12 md:pl-16'}`}>
                   <p className="text-lg sm:text-xl md:text-2xl font-bold text-canva-green mb-2 font-crimson">
                     {event.time}
                   </p>
@@ -87,8 +87,8 @@ const TimelineSection: React.FC = () => {
                 {/* Línea punteada que conecta al círculo */}
                 <div
                   className={`absolute top-1/2 ${
-                    isLeft ? 'right-0 mr-[-2rem] sm:mr-[-4rem] md:mr-[-6rem]' : 'left-0 ml-[-2rem] sm:ml-[-4rem] md:ml-[-6rem]'
-                  } w-8 sm:w-16 md:w-24 border-t-2 border-dashed border-wedding-green-400 transition-all duration-700 ${
+                    isLeft ? 'right-0 mr-[-3rem] sm:mr-[-6rem] md:mr-[-8rem]' : 'left-0 ml-[-3rem] sm:ml-[-6rem] md:ml-[-8rem]'
+                  } w-12 sm:w-24 md:w-32 border-t-2 border-dashed border-wedding-green-400 transition-all duration-700 ${
                     isVisible ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'
                   }`}
                   style={{ transformOrigin: isLeft ? 'right' : 'left' }}
