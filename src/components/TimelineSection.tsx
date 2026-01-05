@@ -35,8 +35,8 @@ const TimelineSection: React.FC = () => {
   const icons = ['🚗', '💒', '🍾', '🍽️', '🎉'];
 
   return (
-    <section className="mt-16 max-w-2xl mx-auto">
-      <div className="relative px-8">
+    <section className="mt-16 max-w-4xl mx-auto px-4">
+      <div className="relative px-4 sm:px-8">
         {/* Línea vertical central */}
         <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-canva-green transform -translate-x-1/2 opacity-30"></div>
         
