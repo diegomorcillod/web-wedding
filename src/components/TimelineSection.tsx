@@ -37,18 +37,40 @@ const TimelineSection: React.FC = () => {
   return (
     <section className="mt-16 max-w-4xl mx-auto px-4">
       <div className="relative px-4 sm:px-8">
-        {/* Línea vertical central */}
-        <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-canva-green transform -translate-x-1/2 opacity-30"></div>
+        {/* SVG con línea curva de fondo */}
+        <svg 
+          className="absolute left-1/2 top-0 transform -translate-x-1/2 opacity-30" 
+          width="20" 
+          height="100%" 
+          style={{ minHeight: '100%' }}
+        >
+          <path
+            d="M10,0 Q5,50 10,100 T10,200 T10,300 T10,400 T10,500 T10,600 T10,700 T10,800 T10,900 T10,1000 T10,1100 T10,1200 T10,1300 T10,1400 T10,1500"
+            stroke="#2e6417"
+            strokeWidth="2"
+            fill="none"
+          />
+        </svg>
         
-        {/* Línea animada que crece con el scroll */}
-        <div 
-          className="absolute left-1/2 top-0 w-0.5 bg-canva-green transform -translate-x-1/2 transition-all duration-700 ease-out"
+        {/* SVG con línea curva animada que crece con el scroll */}
+        <svg 
+          className="absolute left-1/2 top-0 transform -translate-x-1/2 transition-all duration-700 ease-out" 
+          width="20" 
+          height="100%"
           style={{ 
-            height: visibleItems.includes(weddingConfig.schedule.length - 1) 
-              ? '100%' 
-              : `${(Math.max(...visibleItems, -1) + 1) / weddingConfig.schedule.length * 100}%`,
+            minHeight: '100%',
+            clipPath: visibleItems.includes(weddingConfig.schedule.length - 1) 
+              ? 'inset(0 0 0 0)' 
+              : `inset(0 0 ${100 - (Math.max(...visibleItems, -1) + 1) / weddingConfig.schedule.length * 100}% 0)`
           }}
-        ></div>
+        >
+          <path
+            d="M10,0 Q5,50 10,100 T10,200 T10,300 T10,400 T10,500 T10,600 T10,700 T10,800 T10,900 T10,1000 T10,1100 T10,1200 T10,1300 T10,1400 T10,1500"
+            stroke="#2e6417"
+            strokeWidth="2"
+            fill="none"
+          />
+        </svg>
 
         {weddingConfig.schedule.map((event, index) => {
           const isLeft = index % 2 === 0;
