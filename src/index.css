@@ -36,11 +36,24 @@
     }
   }
 
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
   .animate-heartbeat {
     animation: heartbeat 2s ease-in-out infinite;
   }
 
   .animate-fade-in {
     animation: fade-in 1s ease-out;
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
   }
 }

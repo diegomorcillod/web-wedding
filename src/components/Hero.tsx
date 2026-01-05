@@ -5,7 +5,7 @@ const Hero: React.FC = () => {
   return (
     <section className="text-center px-4">
       {/* ¡NOS CASAMOS! - Grande y con efectos */}
-      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-script font-bold text-canva-green mb-6 sm:mb-8 tracking-wider uppercase animate-pulse">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-script font-bold text-canva-green mb-6 sm:mb-8 tracking-wider uppercase animate-float">
         ¡NOS CASAMOS!
       </h2>
       
