@@ -37,6 +37,52 @@ const TimelineSection: React.FC = () => {
   return (
     <section className="mt-16 max-w-4xl mx-auto px-4">
       <div className="relative px-4 sm:px-8">
+        {/* SVG Línea en zigzag de fondo (opaca) */}
+        <svg 
+          className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-30"
+          style={{ minHeight: '100%' }}
+        >
+          <path
+            d={weddingConfig.schedule.map((_, index) => {
+              const isLeft = index % 2 === 0;
+              const yPosition = index * 160; // Aproximadamente mb-16 en px
+              const xPosition = isLeft ? '7%' : '93%'; // Posición izquierda o derecha
+              return index === 0 
+                ? `M ${xPosition} ${yPosition}` 
+                : `L ${xPosition} ${yPosition}`;
+            }).join(' ')}
+            stroke="#2e6417"
+            strokeWidth="3"
+            fill="none"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+
+        {/* SVG Línea en zigzag animada que se va revelando */}
+        <svg 
+          className="absolute top-0 left-0 w-full h-full pointer-events-none transition-all duration-700"
+          style={{ minHeight: '100%' }}
+        >
+          <path
+            d={weddingConfig.schedule.map((_, index) => {
+              const isLeft = index % 2 === 0;
+              const yPosition = index * 160;
+              const xPosition = isLeft ? '7%' : '93%';
+              return index === 0 
+                ? `M ${xPosition} ${yPosition}` 
+                : `L ${xPosition} ${yPosition}`;
+            }).join(' ')}
+            stroke="#2e6417"
+            strokeWidth="3"
+            fill="none"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeDasharray="2000"
+            strokeDashoffset={2000 - (Math.max(...visibleItems, -1) + 1) / weddingConfig.schedule.length * 2000}
+          />
+        </svg>
+
         {weddingConfig.schedule.map((event, index) => {
           const isLeft = index % 2 === 0; // Par = izquierda, Impar = derecha
           const isVisible = visibleItems.includes(index);
