@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
       {/* Líneas con corazón en el centro */}
       <div className="flex items-center justify-center gap-3 sm:gap-4 mb-6 sm:mb-8">
         <div className="h-0.5 w-16 sm:w-20 md:w-32 bg-wedding-green-600"></div>
-        <div className="text-2xl sm:text-3xl md:text-4xl text-wedding-pink-500 animate-heartbeat">
+        <div className="text-2xl sm:text-3xl md:text-4xl text-canva-pink animate-heartbeat">
           ♥
         </div>
         <div className="h-0.5 w-16 sm:w-20 md:w-32 bg-wedding-green-600"></div>
