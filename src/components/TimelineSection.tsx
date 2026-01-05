@@ -87,22 +87,22 @@ const TimelineSection: React.FC = () => {
                 {/* Línea punteada que conecta al círculo */}
                 <div
                   className={`absolute top-1/2 ${
-                    isLeft ? 'right-0 mr-[-3rem] sm:mr-[-6rem] md:mr-[-8rem]' : 'left-0 ml-[-3rem] sm:ml-[-6rem] md:ml-[-8rem]'
-                  } w-12 sm:w-24 md:w-32 border-t-2 border-dashed border-wedding-green-400 transition-all duration-700 ${
+                    isLeft ? 'left-full ml-2 sm:ml-4' : 'right-full mr-2 sm:mr-4'
+                  } w-4 sm:w-8 md:w-12 border-t-2 border-dashed border-wedding-green-400 transition-all duration-700 ${
                     isVisible ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'
                   }`}
-                  style={{ transformOrigin: isLeft ? 'right' : 'left' }}
+                  style={{ transformOrigin: isLeft ? 'left' : 'right' }}
                 ></div>
               </div>
 
               {/* Punto central con icono */}
-              <div className="w-[10%] sm:w-2/12 flex justify-center">
+              <div className="w-[10%] sm:w-2/12 flex justify-center flex-shrink-0">
                 <div
-                  className={`w-12 h-12 rounded-full bg-white border-4 border-canva-green flex items-center justify-center shadow-lg z-10 transition-all duration-500 ${
+                  className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white border-3 sm:border-4 border-canva-green flex items-center justify-center shadow-lg z-10 transition-all duration-500 ${
                     isVisible ? 'scale-100 rotate-0' : 'scale-0 rotate-180'
                   }`}
                 >
-                  <span className="text-2xl">{icons[index]}</span>
+                  <span className="text-xl sm:text-2xl">{icons[index]}</span>
                 </div>
               </div>
 
