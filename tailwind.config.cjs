@@ -34,8 +34,8 @@ module.exports = {
           600: '#16a34a',
           700: '#12622f',
         },
-        'canva-green': '#9AA07E',      // Verde salvia
-        'canva-green-light': '#9AA07E', // Verde salvia
+        'canva-green': '#6B7456',      // Verde salvia más oscuro
+        'canva-green-light': '#6B7456', // Verde salvia más oscuro
         'canva-pink': '#C58A8A',        // Rosa empolvado
         'canva-burgundy': '#6E1F1F',    // Burdeos
       },
