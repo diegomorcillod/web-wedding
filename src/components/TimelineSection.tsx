@@ -40,12 +40,14 @@ const TimelineSection: React.FC = () => {
         {/* SVG con línea curva de fondo */}
         <svg 
           className="absolute left-1/2 top-0 transform -translate-x-1/2 opacity-30" 
-          width="20" 
+          width="60" 
           height="100%" 
           style={{ minHeight: '100%' }}
+          viewBox="0 0 60 1500"
+          preserveAspectRatio="none"
         >
           <path
-            d="M10,0 Q5,50 10,100 T10,200 T10,300 T10,400 T10,500 T10,600 T10,700 T10,800 T10,900 T10,1000 T10,1100 T10,1200 T10,1300 T10,1400 T10,1500"
+            d="M30,0 Q10,75 30,150 Q50,225 30,300 Q10,375 30,450 Q50,525 30,600 Q10,675 30,750 Q50,825 30,900 Q10,975 30,1050 Q50,1125 30,1200 Q10,1275 30,1350 Q50,1425 30,1500"
             stroke="#2e6417"
             strokeWidth="2"
             fill="none"
@@ -55,8 +57,10 @@ const TimelineSection: React.FC = () => {
         {/* SVG con línea curva animada que crece con el scroll */}
         <svg 
           className="absolute left-1/2 top-0 transform -translate-x-1/2 transition-all duration-700 ease-out" 
-          width="20" 
+          width="60" 
           height="100%"
+          viewBox="0 0 60 1500"
+          preserveAspectRatio="none"
           style={{ 
             minHeight: '100%',
             clipPath: visibleItems.includes(weddingConfig.schedule.length - 1) 
@@ -65,7 +69,7 @@ const TimelineSection: React.FC = () => {
           }}
         >
           <path
-            d="M10,0 Q5,50 10,100 T10,200 T10,300 T10,400 T10,500 T10,600 T10,700 T10,800 T10,900 T10,1000 T10,1100 T10,1200 T10,1300 T10,1400 T10,1500"
+            d="M30,0 Q10,75 30,150 Q50,225 30,300 Q10,375 30,450 Q50,525 30,600 Q10,675 30,750 Q50,825 30,900 Q10,975 30,1050 Q50,1125 30,1200 Q10,1275 30,1350 Q50,1425 30,1500"
             stroke="#2e6417"
             strokeWidth="2"
             fill="none"
