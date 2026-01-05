@@ -5,47 +5,8 @@ const TimelineSection: React.FC = () => {
   const [visibleItems, setVisibleItems] = useState<number[]>([]);
   const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
   const circleRefs = useRef<(HTMLDivElement | null)[]>([]);
-  const [circlePaths, setCirclePaths] = useState<string>('');
 
   useEffect(() => {
-    const updatePath = () => {
-      if (circleRefs.current.every(ref => ref !== null)) {
-        const containerRect = circleRefs.current[0]?.parentElement?.parentElement?.getBoundingClientRect();
-        if (!containerRect) return;
-
-        const points = circleRefs.current.map((ref) => {
-          if (!ref) return null;
-          const rect = ref.getBoundingClientRect();
-          const x = rect.left - containerRect.left + rect.width / 2;
-          const y = rect.top - containerRect.top + rect.height / 2;
-          return { x, y };
-        }).filter(Boolean) as { x: number; y: number }[];
-
-        // Crear path con curvas suaves (quadratic bezier)
-        let pathData = `M ${points[0].x} ${points[0].y}`;
-        
-        for (let i = 1; i < points.length; i++) {
-          const prev = points[i - 1];
-          const curr = points[i];
-          
-          // Punto de control para la curva - en el medio pero desplazado
-          const midX = (prev.x + curr.x) / 2;
-          const midY = (prev.y + curr.y) / 2;
-          
-          // Curvatura hacia el centro para evitar el texto
-          const isGoingRight = curr.x > prev.x;
-          const controlX = midX + (isGoingRight ? -80 : 80);
-          
-          pathData += ` Q ${controlX} ${midY}, ${curr.x} ${curr.y}`;
-        }
-        
-        setCirclePaths(pathData);
-      }
-    };
-
-    updatePath();
-    window.addEventListener('resize', updatePath);
-    
     const observers = itemRefs.current.map((ref, index) => {
       const observer = new IntersectionObserver(
         (entries) => {
@@ -69,7 +30,6 @@ const TimelineSection: React.FC = () => {
 
     return () => {
       observers.forEach((observer) => observer.disconnect());
-      window.removeEventListener('resize', updatePath);
     };
   }, []);
 
@@ -78,42 +38,6 @@ const TimelineSection: React.FC = () => {
   return (
     <section className="mt-16 max-w-4xl mx-auto px-4">
       <div className="relative px-4 sm:px-8">
-        {/* SVG Línea en zigzag de fondo (opaca) */}
-        {circlePaths && (
-          <svg 
-            className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-30"
-            style={{ minHeight: '100%', zIndex: -1 }}
-          >
-            <path
-              d={circlePaths}
-              stroke="#2e6417"
-              strokeWidth="3"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        )}
-
-        {/* SVG Línea en zigzag animada que se va revelando */}
-        {circlePaths && (
-          <svg 
-            className="absolute top-0 left-0 w-full h-full pointer-events-none transition-all duration-700"
-            style={{ minHeight: '100%', zIndex: -1 }}
-          >
-            <path
-              d={circlePaths}
-              stroke="#2e6417"
-              strokeWidth="3"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeDasharray="2000"
-              strokeDashoffset={2000 - (Math.max(...visibleItems, -1) + 1) / weddingConfig.schedule.length * 2000}
-            />
-          </svg>
-        )}
-
         {weddingConfig.schedule.map((event, index) => {
           const isLeft = index % 2 === 0; // Par = izquierda, Impar = derecha
           const isVisible = visibleItems.includes(index);
